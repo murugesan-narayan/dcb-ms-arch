@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: CONFIG-SERVICE
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/murugesan-narayan/cloud-config
+          default-label: main
