@@ -6,6 +6,12 @@ spring:
     name: USER-SERVICE
   config:
     import: configserver:http://CONFIG-SERVICE
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVICE
+
 #  cloud:
 #    config:
 #      import-check:

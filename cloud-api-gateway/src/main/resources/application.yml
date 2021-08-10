@@ -7,9 +7,10 @@ spring:
   config:
     import: configserver:http://CONFIG-SERVICE
   cloud:
-#    config:
-#      import-check:
-#        enabled: false
+    config:
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVICE
     gateway:
       routes:
         - id: USER-SERVICE
@@ -44,6 +45,8 @@ management:
     web:
       exposure:
         include: hystrix.stream
+
+# http://localhost:9000/actuator/hystrix.stream
 
 #eureka:
 #  client:

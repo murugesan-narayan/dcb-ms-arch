@@ -1,5 +1,10 @@
 spring:
+  config:
+    import: configserver:http://CONFIG-SERVICE
   cloud:
     config:
-      enabled: true
-      uri: http://config-service
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVICE
+#      enabled: true
+#      uri: http://config-service

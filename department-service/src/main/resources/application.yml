@@ -10,6 +10,11 @@ spring:
 #        enabled: false
   config:
     import: configserver:http://CONFIG-SERVICE
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVICE
   zipkin:
     enabled: false
     base-url: http://localhost:9411
